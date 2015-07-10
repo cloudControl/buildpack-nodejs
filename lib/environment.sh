@@ -35,6 +35,6 @@ write_profile() {
 write_export() {
   local bp_dir="$1"
   local build_dir="$2"
-  echo "export PATH=\"$build_dir/vendor/node/bin:$build_dir/node_modules/.bin:\$PATH\"" > $bp_dir/export
-  echo "export NODE_HOME=\"$build_dir/vendor/node\"" >> $bp_dir/export
+  echo "export PATH=\"$build_dir/.paasprovider/node/bin:$build_dir/node_modules/.bin:\$PATH\"" > $bp_dir/export
+  echo "export NODE_HOME=\"$build_dir/.paasprovider/node\"" >> $bp_dir/export
 }

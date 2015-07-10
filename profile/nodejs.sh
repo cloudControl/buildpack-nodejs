@@ -27,8 +27,8 @@ detect_memory() {
   esac
 }
 
-export PATH="$HOME/vendor/node/bin:$HOME/bin:$HOME/node_modules/.bin:$PATH"
-export NODE_HOME="$HOME/vendor/node"
+export PATH="$HOME/.paasprovider/node/bin:$HOME/bin:$HOME/node_modules/.bin:$PATH"
+export NODE_HOME="$HOME/.paasprovider/node"
 
 calculate_concurrency
 log_concurrency

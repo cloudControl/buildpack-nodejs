@@ -15,9 +15,9 @@ CACHE_DIR=${2:-}
 ENV_DIR=${3:-}
 BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
 
-mkdir -p "$BUILD_DIR/vendor/node/"
+mkdir -p "$BUILD_DIR/.paasprovider/node/"
 cd $BUILD_DIR
-export PATH="$BUILD_DIR/vendor/node/bin":$PATH
+export PATH="$BUILD_DIR/.paasprovider/node/bin":$PATH
 
 ### Load dependencies
 
@@ -75,12 +75,12 @@ install_bins() {
 
   if [ -n "$iojs_engine" ]; then
     warn_node_engine "$iojs_engine"
-    install_iojs "$iojs_engine" "$BUILD_DIR/vendor/node"
+    install_iojs "$iojs_engine" "$BUILD_DIR/.paasprovider/node"
   else
     warn_node_engine "$node_engine"
-    install_nodejs "$node_engine" "$BUILD_DIR/vendor/node"
+    install_nodejs "$node_engine" "$BUILD_DIR/.paasprovider/node"
   fi
-  install_npm "$npm_engine" "$BUILD_DIR/vendor/node"
+  install_npm "$npm_engine" "$BUILD_DIR/.paasprovider/node"
   warn_old_npm
 }
 
