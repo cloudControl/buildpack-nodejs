@@ -76,11 +76,12 @@ install_bins() {
   if [ -n "$iojs_engine" ]; then
     warn_node_engine "$iojs_engine"
     install_iojs "$iojs_engine" "$BUILD_DIR/.paasprovider/node"
+    echo "Using bundled npm version for iojs compatibility: `npm --version`"
   else
     warn_node_engine "$node_engine"
     install_nodejs "$node_engine" "$BUILD_DIR/.paasprovider/node"
+    install_npm "$npm_engine" "$BUILD_DIR/.paasprovider/node"
   fi
-  install_npm "$npm_engine" "$BUILD_DIR/.paasprovider/node"
   warn_old_npm
 }
 
