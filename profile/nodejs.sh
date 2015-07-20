@@ -31,7 +31,7 @@ export PATH="$HOME/.paasprovider/node/bin:$HOME/bin:$HOME/node_modules/.bin:$PAT
 export NODE_HOME="$HOME/.paasprovider/node"
 
 calculate_concurrency
-log_concurrency
+#log_concurrency
 
 export MEMORY_AVAILABLE=$MEMORY_AVAILABLE
 export WEB_MEMORY=$WEB_MEMORY
